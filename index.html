@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammilla Support</title>
+    <style>
+      body {
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(180deg, #e8f0ff 0%, #ffffff 100%);
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      .container {
+        background: white;
+        padding: 30px 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-width: 420px;
+        width: 90%;
+        animation: fadeIn 0.8s ease;
+      }
+
+      h1 {
+        color: #3495d2;
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+        margin: 8px 0 20px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-email {
+        background: #3495d2;
+        color: white;
+      }
+
+      .btn-telegram {
+        background: #0088cc;
+        color: white;
+      }
+
+      .btn-back {
+        background: #f0bb35;
+        color: #333;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #777;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Grammilla Support</h1>
+      <p>If you need help with the app, contact us via:</p>
+
+      <button
+        class="btn btn-email"
+        onclick="window.location.href='mailto:support@grammilla.app?subject=Support%20Request%20-%20Grammilla'"
+      >
+        📧 Email Support
+      </button>
+
+      <button
+        class="btn btn-telegram"
+        onclick="window.location.href='https://t.me/grammilla_support'"
+      >
+        💬 Telegram Chat
+      </button>
+
+      <button
+        class="btn btn-back"
+        onclick="window.location.href='https://grammilla.app'"
+      >
+        ⬅️ Back to main site
+      </button>
+
+      <div class="footer">Made with ❤️ in Bologna • Grammilla v1.0</div>
+    </div>
+  </body>
+</html>
