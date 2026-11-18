@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grammilla — Learn Russian Grammar &amp; Vocabulary</title>
   <meta name="description" content="Learn Russian with Grammilla for iOS and Android. Explore the alphabet, grammar and vocabulary through guided lessons, recorded audio and practice exercises." />
-  <meta name="theme-color" content="#e8f0ff" />
+  <meta name="theme-color" content="#fff8e8" />
   <link rel="canonical" href="https://gramillaapp.github.io/grammilla-support/" />
+  <link rel="alternate" hreflang="en" href="https://gramillaapp.github.io/grammilla-support/" />
+  <link rel="alternate" hreflang="it" href="https://gramillaapp.github.io/grammilla-support/it/" />
+  <link rel="alternate" hreflang="x-default" href="https://gramillaapp.github.io/grammilla-support/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Grammilla" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Grammilla — Learn Russian Grammar &amp; Vocabulary" />
   <meta property="og:description" content="From your first Russian letters to grammar practice. Discover guided lessons, vocabulary and exercises for iOS and Android." />
   <meta property="og:url" content="https://gramillaapp.github.io/grammilla-support/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://gramillaapp.github.io/grammilla-support/assets/grammilla-lukomorye-en.webp" />
+  <meta property="og:image:alt" content="Lukomorye — Learn Russian Grammar with Grammilla's blue learned cat." />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -21,6 +28,11 @@
       "name": "Grammilla",
       "url": "https://gramillaapp.github.io/grammilla-support/",
       "description": "An app for learning Russian grammar and vocabulary through lessons, audio and practice exercises.",
+      "inLanguage": "en",
+      "screenshot": [
+        "https://gramillaapp.github.io/grammilla-support/assets/russian-alphabet-lesson-ipad.jpg",
+        "https://gramillaapp.github.io/grammilla-support/assets/russian-grammar-exercises-android.jpg"
+      ],
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Android, iOS, iPadOS",
       "installUrl": [
@@ -29,92 +41,38 @@
       ]
     }
   </script>
-  <style>
-    :root { color-scheme: light; --ink: #25313a; --muted: #526470; --blue: #216e9d; --gold: #f0bb35; --border: #dce7ee; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; color: var(--ink); background: linear-gradient(180deg, #e8f0ff, #fff 800px); font-family: "Inter", "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.65; }
-    a { color: var(--blue); text-underline-offset: 4px; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
-    .skip { position: absolute; top: -100px; left: 16px; padding: 8px 16px; background: #fff; z-index: 1; }
-    .skip:focus { top: 8px; }
-    .wrap { width: min(1080px, calc(100% - 40px)); margin-inline: auto; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; }
-    .brand { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--blue); }
-    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
-    nav a { text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    h1, h2, h3 { line-height: 1.2; }
-    h1 { font-size: clamp(36px, 5.3vw, 62px); letter-spacing: -0.035em; margin: 16px 0 22px; }
-    h2 { font-size: clamp(27px, 3.5vw, 36px); letter-spacing: -0.02em; margin: 0 0 18px; }
-    h3 { font-size: 21px; margin: 0 0 12px; }
-    p { margin: 0 0 16px; }
-    .muted, .intro { color: var(--muted); }
-    .eyebrow { color: var(--blue); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
-    .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 52px; align-items: center; padding-block: 62px 72px; }
-    .intro { font-size: 20px; max-width: 600px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px; border-radius: 10px; font-size: 16px; font-weight: 700; text-decoration: none; }
-    .primary { background: var(--blue); color: white; }
-    .secondary { background: var(--gold); color: #332900; }
-    .btn:hover { filter: brightness(0.94); }
-    .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
-    .lesson { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 18px 50px #216e9d12; }
-    .lesson-label { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
-    .russian { font-size: 38px; line-height: 1.3; margin: 4px 0; color: var(--blue); font-weight: 700; }
-    .translation { color: var(--muted); }
-    .example-rule { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 24px; }
-    .example-rule h2 { font-size: 21px; }
-    .example-rule p:last-child { margin-bottom: 0; }
-    section { padding-block: 52px; scroll-margin-top: 24px; }
-    .section-intro { max-width: 720px; color: var(--muted); margin-bottom: 28px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .panel { border: 1px solid var(--border); border-radius: 16px; background: #fff; padding: 26px; }
-    .panel p { color: var(--muted); margin-bottom: 0; }
-    .number { display: block; color: var(--blue); font-size: 14px; font-weight: 800; margin-bottom: 16px; }
-    .journey { padding: 32px; border-radius: 20px; background: #f2f7fb; }
-    .journey ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-left: 22px; margin: 26px 0 0; }
-    .journey li { padding-left: 4px; }
-    .journey strong { display: block; margin-bottom: 6px; }
-    .journey span { color: var(--muted); }
-    details { border-bottom: 1px solid var(--border); padding-block: 20px; }
-    summary { cursor: pointer; font-weight: 700; }
-    details p { color: var(--muted); margin: 14px 0 0; max-width: 800px; }
-    .support { background: #fff9e9; border: 1px solid #edddb1; border-radius: 20px; padding: 32px; }
-    .support .actions { margin-top: 18px; }
-    .support a { overflow-wrap: anywhere; }
-    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 32px; color: var(--muted); font-size: 14px; }
-    @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 32px 40px; }
-      .grid, .journey ol { grid-template-columns: 1fr; }
-      .journey ol { gap: 20px; }
-      section { padding-block: 32px; }
-      header { align-items: flex-start; }
-      nav { justify-content: flex-end; gap: 8px 16px; }
-    }
-    @media (max-width: 420px) {
-      .wrap { width: calc(100% - 32px); }
-      header { flex-direction: column; gap: 10px; }
-      nav { justify-content: flex-start; }
-      .actions .btn { width: 100%; }
-      .lesson, .journey, .support { padding: 24px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  </style>
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="wrap">
     <a class="brand" href="./" aria-label="Grammilla home">Grammilla</a>
+    <div class="header-links">
     <nav aria-label="Main navigation">
       <a href="#learn">What you'll learn</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#grammar">Grammar examples</a>
       <a href="#questions">FAQ</a>
       <a href="#support">Support</a>
     </nav>
+    <div class="language" role="navigation" aria-label="Language">
+      <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+      <a href="it/" lang="it" hreflang="it">IT</a>
+    </div>
+    </div>
   </header>
   <main id="main" class="wrap">
+    <section id="support" class="support-top" aria-labelledby="support-title">
+      <div class="support">
+        <div>
+          <h2 id="support-title">Grammilla Support</h2>
+          <p>Help, bug reports &amp; ideas: <a href="mailto:grammilla.academy@gmail.com?subject=Support%20Request%20-%20Grammilla">grammilla.academy@gmail.com</a></p>
+        </div>
+        <a class="btn secondary" href="grammilla://">Back to app</a>
+      </div>
+    </section>
     <section class="hero" aria-labelledby="hero-title">
-      <div>
+      <div class="hero-copy">
         <span class="eyebrow">Russian, one lesson at a time</span>
         <h1 id="hero-title">Learn Russian grammar.<br />Put it into practice.</h1>
         <p class="intro">Grammilla is a Russian learning app that brings explanations, vocabulary, audio and exercises together — from your first Cyrillic letters to cases and verbs.</p>
@@ -125,6 +83,7 @@
         </div>
         <p class="note">For iPhone, iPad and Android.</p>
       </div>
+      <img class="world-art" src="assets/grammilla-lukomorye-en.webp" width="1024" height="500" fetchpriority="high" alt="Lukomorye — Learn Russian Grammar. A blue learned cat reads beneath a golden oak." />
       <aside class="lesson" aria-label="Illustrative Russian grammar example">
         <p class="lesson-label">A little Russian to get you started · illustrative example</p>
         <p class="eyebrow">Meet your first sentence</p>
@@ -168,8 +127,84 @@
         </ol>
       </div>
     </section>
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <span class="eyebrow">Inside Grammilla</span>
+      <h2 id="screenshots-title">Russian lessons, grammar exercises &amp; vocabulary practice</h2>
+      <p class="section-intro">Take a look at real screens from the app on iPad and Android. Open any screenshot for a closer look.</p>
+      <div class="shots-intro">
+        <figure>
+          <a class="shot-link" href="assets/russian-alphabet-lesson-ipad.jpg">
+            <img src="assets/russian-alphabet-lesson-ipad.jpg" width="1280" height="889" loading="lazy" decoding="async" alt="Grammilla Russian alphabet lesson on iPad, with Cyrillic letters, word stress and pronunciation examples." />
+          </a>
+          <figcaption><strong>Learn the Russian alphabet on iPad</strong>Cyrillic letters, pronunciation and examples in a spacious lesson view.</figcaption>
+        </figure>
+        <div>
+          <h3>From Cyrillic to confident grammar practice</h3>
+          <p>Begin with the Russian alphabet and pronunciation, then build your understanding of cases, verbs and sentence patterns.</p>
+          <p class="muted">The app offers interface and explanations in English and Italian, so you can learn Russian through a language you already know.</p>
+          <p class="note">These screenshots show the English interface. Appearance may vary by app version.</p>
+        </div>
+      </div>
+      <div class="shots-grid">
+        <figure>
+          <a class="shot-link" href="assets/learn-russian-topics-android.jpg"><img src="assets/learn-russian-topics-android.jpg" width="576" height="1280" loading="lazy" decoding="async" alt="Grammilla Russian learning topics on Android, showing alphabet lessons and lesson progress." /></a>
+          <figcaption><strong>A structured Russian learning path</strong>Choose a topic and follow your lesson progress.</figcaption>
+        </figure>
+        <figure>
+          <a class="shot-link" href="assets/russian-grammar-exercises-android.jpg"><img src="assets/russian-grammar-exercises-android.jpg" width="576" height="1280" loading="lazy" decoding="async" alt="Russian verbs of motion exercise in Grammilla, with an illustrated walking scene, answer feedback and audio." /></a>
+          <figcaption><strong>Practise Russian verbs of motion</strong>Connect a picture with the correct verb form, check your answer and listen.</figcaption>
+        </figure>
+        <figure>
+          <a class="shot-link" href="assets/russian-vocabulary-practice-android.jpg"><img src="assets/russian-vocabulary-practice-android.jpg" width="576" height="1280" loading="lazy" decoding="async" alt="Grammilla Russian vocabulary practice card with the word соседний, audio, translation reveal and review options." /></a>
+          <figcaption><strong>Build your Russian vocabulary</strong>Listen to a word, recall its meaning and choose what to review.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="grammar" aria-labelledby="grammar-title">
+      <span class="eyebrow">A taste of the lessons</span>
+      <h2 id="grammar-title">Russian grammar, with examples that make the difference clear</h2>
+      <p class="section-intro">Here are two topics you can explore in Grammilla: verbs of motion without prefixes and imperfective vs perfective aspect.</p>
+      <div class="topic-examples">
+        <article class="topic-card">
+          <h3>Russian verbs of motion without prefixes</h3>
+          <p class="pair" lang="ru">идти — ходить · ехать — ездить</p>
+          <p>Russian distinguishes going on foot from going by transport. It also distinguishes movement in one direction at a specific moment from repeated or regular journeys.</p>
+          <div class="example">
+            <p class="example-label">On foot / by transport</p>
+            <p><span lang="ru">Я сейчас иду в супермаркет. А ты?</span> (I'm going to the supermarket now. And you?)</p>
+            <p><span lang="ru">А я сейчас еду на автобусе в центр.</span> (And I'm going to the center by bus now.)</p>
+          </div>
+          <p><span lang="ru">Идти / ехать</span> are unidirectional; <span lang="ru">ходить / ездить</span> are multidirectional and can describe repeated or regular movement.</p>
+          <p class="topic-note">All four are imperfective verbs. This distinction is different from the imperfective / perfective aspect contrast.</p>
+        </article>
+        <article class="topic-card">
+          <h3>Imperfective vs perfective Russian verbs</h3>
+          <p class="pair"><span lang="ru">НСВ / СВ</span> · process / result</p>
+          <p>The choice of aspect depends on context and what you want to express. Compare two examples from the app's lesson on infinitives:</p>
+          <div class="example">
+            <p class="example-label">Imperfective — focus on the process</p>
+            <p><span lang="ru">Я хочу говорить по-русски.</span> (I want to speak Russian.)</p>
+          </div>
+          <div class="example">
+            <p class="example-label">Perfective — focus on the result</p>
+            <p><span lang="ru">Я хочу сказать тебе правду.</span> (I want to tell you the truth.)</p>
+          </div>
+          <p class="topic-note">Process / result is a useful starting point, not the whole rule. Grammilla also covers other contexts, including perfective verbs with <span lang="ru">по-</span> for an action done for a while.</p>
+        </article>
+      </div>
+      <p class="note">Short examples adapted from Grammilla's verbs of motion and verb aspect lessons. Continue in the app for the full explanations and practice.</p>
+      <div class="actions"><a class="btn primary" href="#download">Explore the lessons in Grammilla</a></div>
+    </section>
     <section id="questions" aria-labelledby="questions-title">
       <h2 id="questions-title">Before your first lesson</h2>
+      <details>
+        <summary>Can I study Russian verbs of motion and verb aspect?</summary>
+        <p>Yes. Grammilla has lessons on verbs of motion without prefixes, including <span lang="ru">идти / ходить</span> and <span lang="ru">ехать / ездить</span>, and on imperfective and perfective aspect. <a href="#grammar">See examples from these topics</a>.</p>
+      </details>
+      <details>
+        <summary>Can I learn Russian with explanations in Italian?</summary>
+        <p>Yes. The app offers interface and explanations in Italian and English. You can also <a href="it/" hreflang="it" lang="it">leggere questa pagina in italiano</a>.</p>
+      </details>
       <details>
         <summary>Can I use Grammilla as a complete beginner?</summary>
         <p>Yes. You can begin with the Russian alphabet, pronunciation and introductory vocabulary before moving on to grammar and practical language topics.</p>
@@ -190,18 +225,6 @@
         <summary>Where can I download the app?</summary>
         <p>Grammilla is available on the <a href="https://apps.apple.com/app/id6772191189">App Store for iPhone and iPad</a> and on <a href="https://play.google.com/store/apps/details?id=com.deny123.Grammila">Google Play for Android</a>.</p>
       </details>
-    </section>
-    <section id="support" aria-labelledby="support-title">
-      <div class="support">
-        <h2 id="support-title">Grammilla Support</h2>
-        <p>Need help, spotted a bug or have an idea? Email the Grammilla team. For a technical issue, include your device, app version and what happened.</p>
-        <div class="actions">
-          <a class="btn primary" href="mailto:grammilla.academy@gmail.com?subject=Support%20Request%20-%20Grammilla">Email Support</a>
-          <a class="btn secondary" href="https://t.me/grammilla_support_bot">Chat with our Telegram Bot</a>
-          <a class="btn secondary" href="grammilla://">Back to app</a>
-        </div>
-        <p class="note">Support and privacy contact: <a href="mailto:grammilla.academy@gmail.com">grammilla.academy@gmail.com</a></p>
-      </div>
     </section>
   </main>
   <footer class="wrap">
