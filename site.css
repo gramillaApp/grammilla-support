@@ -72,6 +72,10 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12
 
 /* Shared by both static language pages. */
 .language { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--border); border-radius: 999px; background: #fffaf0; font-size: 14px; }
+.language { flex-wrap: wrap; max-width: 100%; }
+.language-notice { margin-top: 20px; padding: 18px 22px; border: 1px solid #d8bb79; border-left: 4px solid var(--gold); border-radius: 14px; background: #fff6dc; }
+.language-notice p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.tablet-shot { max-width: 900px; margin: 28px auto 36px; }
 .language a { padding: 4px 10px; border-radius: 999px; text-decoration: none; }
 .language a[aria-current="page"] { background: var(--blue); color: #fff; }
 .header-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 16px 24px; }
