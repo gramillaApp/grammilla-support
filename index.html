@@ -1,124 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grammilla Support</title>
-    <style>
-      body {
-        font-family: "Inter", "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(180deg, #e8f0ff 0%, #ffffff 100%);
-        color: #333;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-      }
-
-      .container {
-        background: white;
-        padding: 30px 25px;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        max-width: 420px;
-        width: 90%;
-        animation: fadeIn 0.8s ease;
-      }
-
-      h1 {
-        color: #3495d2;
-        font-size: 26px;
-        margin-bottom: 12px;
-      }
-
-      p {
-        font-size: 16px;
-        color: #555;
-        margin: 8px 0 20px;
-      }
-
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 14px;
-        cursor: pointer;
-        transition: transform 0.15s ease, box-shadow 0.2s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-email {
-        background: #3495d2;
-        color: white;
-      }
-
-      .btn-telegram {
-        background: #0088cc;
-        color: white;
-      }
-
-      .btn-back {
-        background: #f0bb35;
-        color: #333;
-      }
-
-      .footer {
-        margin-top: 20px;
-        font-size: 13px;
-        color: #777;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Grammilla Support</h1>
-      <p>If you need help with the app, contact us via:</p>
-
-      <button
-        class="btn btn-email"
-        onclick="window.location.href='mailto:grammilla.support@gmail.com?subject=Support%20Request%20-%20Grammilla'"
-      >
-        📧 Email Support
-      </button>
-
-      <button
-        class="btn btn-telegram"
-        onclick="window.location.href='https://t.me/grammilla_support_bot'"
-      >
-        💬 Chat with our Telegram Bot
-      </button>
-
-      <button
-        class="btn btn-back"
-        onclick="window.location.href='grammilla://'"
-      >
-        ⬅️ Back to app
-      </button>
-
-      <div class="footer">Made with ❤️ in Bologna • Grammilla v1.0</div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grammilla — Learn Russian Grammar &amp; Vocabulary</title>
+  <meta name="description" content="Learn Russian with Grammilla for iOS and Android. Explore the alphabet, grammar and vocabulary through guided lessons, recorded audio and practice exercises." />
+  <meta name="theme-color" content="#e8f0ff" />
+  <link rel="canonical" href="https://gramillaapp.github.io/grammilla-support/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Grammilla" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Grammilla — Learn Russian Grammar &amp; Vocabulary" />
+  <meta property="og:description" content="From your first Russian letters to grammar practice. Discover guided lessons, vocabulary and exercises for iOS and Android." />
+  <meta property="og:url" content="https://gramillaapp.github.io/grammilla-support/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Grammilla",
+      "url": "https://gramillaapp.github.io/grammilla-support/",
+      "description": "An app for learning Russian grammar and vocabulary through lessons, audio and practice exercises.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Android, iOS, iPadOS",
+      "installUrl": [
+        "https://play.google.com/store/apps/details?id=com.deny123.Grammila",
+        "https://apps.apple.com/app/id6772191189"
+      ]
+    }
+  </script>
+  <style>
+    :root { color-scheme: light; --ink: #25313a; --muted: #526470; --blue: #216e9d; --gold: #f0bb35; --border: #dce7ee; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: linear-gradient(180deg, #e8f0ff, #fff 800px); font-family: "Inter", "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.65; }
+    a { color: var(--blue); text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+    .skip { position: absolute; top: -100px; left: 16px; padding: 8px 16px; background: #fff; z-index: 1; }
+    .skip:focus { top: 8px; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin-inline: auto; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; }
+    .brand { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--blue); }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
+    nav a { text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: clamp(36px, 5.3vw, 62px); letter-spacing: -0.035em; margin: 16px 0 22px; }
+    h2 { font-size: clamp(27px, 3.5vw, 36px); letter-spacing: -0.02em; margin: 0 0 18px; }
+    h3 { font-size: 21px; margin: 0 0 12px; }
+    p { margin: 0 0 16px; }
+    .muted, .intro { color: var(--muted); }
+    .eyebrow { color: var(--blue); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+    .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 52px; align-items: center; padding-block: 62px 72px; }
+    .intro { font-size: 20px; max-width: 600px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px; border-radius: 10px; font-size: 16px; font-weight: 700; text-decoration: none; }
+    .primary { background: var(--blue); color: white; }
+    .secondary { background: var(--gold); color: #332900; }
+    .btn:hover { filter: brightness(0.94); }
+    .note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+    .lesson { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 18px 50px #216e9d12; }
+    .lesson-label { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+    .russian { font-size: 38px; line-height: 1.3; margin: 4px 0; color: var(--blue); font-weight: 700; }
+    .translation { color: var(--muted); }
+    .example-rule { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 24px; }
+    .example-rule h2 { font-size: 21px; }
+    .example-rule p:last-child { margin-bottom: 0; }
+    section { padding-block: 52px; scroll-margin-top: 24px; }
+    .section-intro { max-width: 720px; color: var(--muted); margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .panel { border: 1px solid var(--border); border-radius: 16px; background: #fff; padding: 26px; }
+    .panel p { color: var(--muted); margin-bottom: 0; }
+    .number { display: block; color: var(--blue); font-size: 14px; font-weight: 800; margin-bottom: 16px; }
+    .journey { padding: 32px; border-radius: 20px; background: #f2f7fb; }
+    .journey ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-left: 22px; margin: 26px 0 0; }
+    .journey li { padding-left: 4px; }
+    .journey strong { display: block; margin-bottom: 6px; }
+    .journey span { color: var(--muted); }
+    details { border-bottom: 1px solid var(--border); padding-block: 20px; }
+    summary { cursor: pointer; font-weight: 700; }
+    details p { color: var(--muted); margin: 14px 0 0; max-width: 800px; }
+    .support { background: #fff9e9; border: 1px solid #edddb1; border-radius: 20px; padding: 32px; }
+    .support .actions { margin-top: 18px; }
+    .support a { overflow-wrap: anywhere; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 32px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 32px 40px; }
+      .grid, .journey ol { grid-template-columns: 1fr; }
+      .journey ol { gap: 20px; }
+      section { padding-block: 32px; }
+      header { align-items: flex-start; }
+      nav { justify-content: flex-end; gap: 8px 16px; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 32px); }
+      header { flex-direction: column; gap: 10px; }
+      nav { justify-content: flex-start; }
+      .actions .btn { width: 100%; }
+      .lesson, .journey, .support { padding: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap">
+    <a class="brand" href="./" aria-label="Grammilla home">Grammilla</a>
+    <nav aria-label="Main navigation">
+      <a href="#learn">What you'll learn</a>
+      <a href="#questions">FAQ</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow">Russian, one lesson at a time</span>
+        <h1 id="hero-title">Learn Russian grammar.<br />Put it into practice.</h1>
+        <p class="intro">Grammilla is a Russian learning app that brings explanations, vocabulary, audio and exercises together — from your first Cyrillic letters to cases and verbs.</p>
+        <p class="muted">Follow guided lessons and explore a learning world inspired by Lukomorye, Russian literature and folklore.</p>
+        <div class="actions" id="download">
+          <a class="btn primary" href="https://apps.apple.com/app/id6772191189">Download on the App Store</a>
+          <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.deny123.Grammila">Get it on Google Play</a>
+        </div>
+        <p class="note">For iPhone, iPad and Android.</p>
+      </div>
+      <aside class="lesson" aria-label="Illustrative Russian grammar example">
+        <p class="lesson-label">A little Russian to get you started · illustrative example</p>
+        <p class="eyebrow">Meet your first sentence</p>
+        <p class="russian" lang="ru">Это дом.</p>
+        <p class="translation">This is a house.</p>
+        <div class="example-rule">
+          <h2>Understand. Then practise.</h2>
+          <p>Use <span lang="ru">«Это…»</span> to introduce something. There is no separate word for “is” in this simple Russian sentence.</p>
+          <p class="translation"><span lang="ru">Это парк.</span> (This is a park.)</p>
+        </div>
+      </aside>
+    </section>
+    <section id="learn" aria-labelledby="learn-title">
+      <h2 id="learn-title">Build your Russian, step by step</h2>
+      <p class="section-intro">Start with the basics or return to a topic you want to understand better. Connect each explanation with examples and practice.</p>
+      <div class="grid">
+        <article class="panel">
+          <span class="number">01 / A foundation in Russian</span>
+          <h3>Alphabet &amp; first words</h3>
+          <p>Get familiar with Cyrillic, listen to recorded pronunciation and learn useful vocabulary for your first steps in Russian.</p>
+        </article>
+        <article class="panel">
+          <span class="number">02 / Make sense of the rules</span>
+          <h3>Grammar in context</h3>
+          <p>Study Russian cases, verbs and sentence patterns with explanations and examples. Work through a topic at your own pace.</p>
+        </article>
+        <article class="panel">
+          <span class="number">03 / Use what you've learned</span>
+          <h3>Exercises &amp; vocabulary</h3>
+          <p>Practise with quizzes and vocabulary training, revisit studied topics and follow your completed lessons and learning streak.</p>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="routine-title">
+      <div class="journey">
+        <h2 id="routine-title">A clear path from explanation to practice</h2>
+        <ol>
+          <li><strong>Choose a topic</strong><span>Begin with the alphabet or pick the grammar you want to work on.</span></li>
+          <li><strong>Learn in small steps</strong><span>Read the explanation, explore examples and listen where audio is available.</span></li>
+          <li><strong>Check your understanding</strong><span>Try the exercises, then come back to review and strengthen what you've studied.</span></li>
+        </ol>
+      </div>
+    </section>
+    <section id="questions" aria-labelledby="questions-title">
+      <h2 id="questions-title">Before your first lesson</h2>
+      <details>
+        <summary>Can I use Grammilla as a complete beginner?</summary>
+        <p>Yes. You can begin with the Russian alphabet, pronunciation and introductory vocabulary before moving on to grammar and practical language topics.</p>
+      </details>
+      <details>
+        <summary>Can I practise Russian grammar if I already know the basics?</summary>
+        <p>Yes. Use topic-based lessons and exercises to revisit rules, practise Russian cases and verbs, and strengthen your vocabulary.</p>
+      </details>
+      <details>
+        <summary>Does Grammilla help with TORFL / TRKI preparation?</summary>
+        <p>Grammar and vocabulary practice can support your preparation for TORFL / TRKI. Use it alongside the exam requirements and other study materials for your level.</p>
+      </details>
+      <details>
+        <summary>Do I need an account to start?</summary>
+        <p>You can start as a guest. Sign in if you want to sync your progress with your account.</p>
+      </details>
+      <details>
+        <summary>Where can I download the app?</summary>
+        <p>Grammilla is available on the <a href="https://apps.apple.com/app/id6772191189">App Store for iPhone and iPad</a> and on <a href="https://play.google.com/store/apps/details?id=com.deny123.Grammila">Google Play for Android</a>.</p>
+      </details>
+    </section>
+    <section id="support" aria-labelledby="support-title">
+      <div class="support">
+        <h2 id="support-title">Grammilla Support</h2>
+        <p>Need help, spotted a bug or have an idea? Email the Grammilla team. For a technical issue, include your device, app version and what happened.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:grammilla.academy@gmail.com?subject=Support%20Request%20-%20Grammilla">Email Support</a>
+          <a class="btn secondary" href="https://t.me/grammilla_support_bot">Chat with our Telegram Bot</a>
+          <a class="btn secondary" href="grammilla://">Back to app</a>
+        </div>
+        <p class="note">Support and privacy contact: <a href="mailto:grammilla.academy@gmail.com">grammilla.academy@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">
+    <span>Grammilla · Made with care in Bologna</span>
+    <a href="https://grammilla-academy.github.io/privacy/privacy.html">Privacy Policy</a>
+  </footer>
+</body>
 </html>
