@@ -6,6 +6,7 @@
   <title>Grammilla — Russische Grammatik und Vokabeln lernen</title>
   <meta name="description" content="Russisch lernen mit Grammilla für iOS und Android: kyrillisches Alphabet, Grammatik, Vokabeln und Übungen. Die App ist auf Englisch, Italienisch und Russisch verfügbar." />
   <meta name="theme-color" content="#fff8e8" />
+  <meta name="apple-itunes-app" content="app-id=6772191189" />
   <link rel="canonical" href="https://gramillaapp.github.io/grammilla-support/de/" />
   <link rel="alternate" hreflang="en" href="https://gramillaapp.github.io/grammilla-support/" />
   <link rel="alternate" hreflang="it" href="https://gramillaapp.github.io/grammilla-support/it/" />
@@ -39,6 +40,11 @@
       ],
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Android, iOS, iPadOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
       "installUrl": [
         "https://play.google.com/store/apps/details?id=com.deny123.Grammila",
         "https://apps.apple.com/app/id6772191189"
@@ -196,5 +202,31 @@
   <footer class="wrap"><span>Grammilla · Mit Sorgfalt in Bologna entwickelt</span>
     <a href="https://grammilla-academy.github.io/privacy/privacy.html">Datenschutzerklärung</a>
   </footer>
+  <script>
+    // "Back to app": open the app if installed, otherwise go to the store.
+    (function () {
+      var link = document.querySelector('a[href^="grammilla://"]');
+      if (!link) return;
+      var ua = navigator.userAgent || "";
+      var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      var store = isIOS
+        ? "https://apps.apple.com/app/id6772191189"
+        : isAndroid
+          ? "https://play.google.com/store/apps/details?id=com.deny123.Grammila"
+          : null;
+      if (!store) { link.style.display = "none"; return; }
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var deepLink = link.getAttribute("href");
+        var timer = setTimeout(function () { window.location.href = store; }, 1500);
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) clearTimeout(timer);
+        }, { once: true });
+        window.location.href = deepLink;
+      });
+    })();
+  </script>
 </body>
 </html>
